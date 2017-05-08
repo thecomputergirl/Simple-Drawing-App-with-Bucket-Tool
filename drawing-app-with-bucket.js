@@ -21,8 +21,9 @@ var drawingApp = (function () {
 
 	var contexts = {},
 		context,
-		canvasWidth = 490,
-		canvasHeight = 260,
+		canvasWidth = 960,
+		canvasHeight = 500,
+	        canvasBackgroundImage = 
 		outlineImage = new Image(),
 		crayonImage = new Image(),
 		markerImage = new Image(),
@@ -710,6 +711,10 @@ var drawingApp = (function () {
 			contexts.outline = canvasElement.getContext("2d"); // Grab the 2d canvas context
 
 			// Load images
+			
+			canvasBackgroundImage.onload = resourceLoaded;
+			canvasBackgroundImage.src = "https://raw.githubusercontent.com/thecomputergirl/doodledoo/master/images/103WrightStreet_500_sml90.png";
+
 			crayonImage.onload = resourceLoaded;
 			crayonImage.src = "images/crayon-outline.png";
 
