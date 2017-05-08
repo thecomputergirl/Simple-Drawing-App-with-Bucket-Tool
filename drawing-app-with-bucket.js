@@ -23,7 +23,7 @@ var drawingApp = (function () {
 		context,
 		canvasWidth = 960,
 		canvasHeight = 500,
-	        canvasBackgroundImage = 
+	        canvasBackgroundImage = new Image(), 
 		outlineImage = new Image(),
 		crayonImage = new Image(),
 		markerImage = new Image(),
